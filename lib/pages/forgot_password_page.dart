@@ -22,11 +22,11 @@ class ForgotPasswordPage extends StatefulWidget {
        showDialog(context: context, builder: (context){
          return AlertDialog(
            backgroundColor: Colors.redAccent,
-           title: const Text('Error'),
-           content: Text(e.message.toString()),
+           title: const Text('Error',style: TextStyle(color: Colors.white),),
+           content: Text(e.message.toString(),style: TextStyle(color: Colors.white),),
            actions: [
              TextButton(
-               child: const Text('OK',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+               child: const Text('OK',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                onPressed: () {
                  Navigator.of(context).pop();
                },
