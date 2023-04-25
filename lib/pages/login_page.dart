@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project1/pages/forgot_password_page.dart';
+import 'package:project1/pages/google_sign_in.dart';
 
 class LoginPage extends StatefulWidget {
   final VoidCallback showRegisterPage;
@@ -165,6 +167,22 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ],
+                  ),
+                ),
+                SizedBox(height: 20,),
+                GestureDetector(
+                  onTap:(){
+                    AuthService().signInWithGoogle();
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(30),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: const Text(
+                      'google'
+                    ),
                   ),
                 )
               ],
