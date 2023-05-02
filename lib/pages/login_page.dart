@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 GestureDetector(
                   onTap:(){
                     AuthService().signInWithGoogle();
@@ -182,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: const Text(
                       'google'
-                    ),
+                    ,style: TextStyle(color: Colors.white),),
                   ),
                 )
               ],
